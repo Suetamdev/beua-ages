@@ -1,0 +1,32 @@
+spriteTypes = {
+	# Objectives Icons
+	spriteType = {
+		name = "GFX_obj_beua_large_native_force"
+		texturefile = "gfx/interface/ages/obj_beua_large_native_force.dds"
+	}
+
+	spriteType = {
+		name = "GFX_obj_beua_50_development"
+		texturefile = "gfx/interface/ages/obj_beua_50_development.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_beua_competent_court"
+		texturefile = "gfx/interface/ages/obj_beua_competent_court.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_dig_holds"
+		texturefile = "gfx/interface/ages/obj_dig_holds.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_beua_audit_government"
+		texturefile = "gfx/interface/ages/obj_beua_audit_government.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_beua_enlarge_crownland"
+		texturefile = "gfx/interface/ages/obj_beua_enlarge_crownland.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_beua_magical_or_artificer_infrastructure"
+		texturefile = "gfx/interface/ages/obj_beua_magical_or_artificer_infrastructure.dds"
+	}
+}

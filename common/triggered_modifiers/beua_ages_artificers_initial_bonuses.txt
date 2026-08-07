@@ -1,0 +1,24 @@
+########################################################
+####### Age Artificers Initial Bonuses            #######
+########################################################
+beua_ages_artificers_bonus_orcish_nation = {
+	potential = {
+		current_age = age_of_revolutions
+		culture_group = orcish
+	}
+	trigger = {
+	}
+	development_cost = -0.1
+	defensiveness = 0.15
+}
+
+beua_ages_artificers_bonus_anbennarian_resurgence = {
+	potential = {
+		current_age = age_of_revolutions
+		tag = Z01
+	}
+	trigger = {
+	}
+	fire_damage_received = -0.05
+	global_unrest = -1
+}

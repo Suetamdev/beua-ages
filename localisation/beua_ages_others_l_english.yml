@@ -1,0 +1,5 @@
+﻿l_english:
+ # Artificer Infrastructure 
+ artifice_unlocked_basic:0 "Basic Artificer Infrastructure"
+ artifice_unlocked_advanced:0 "Advanced Artificer Infrastructure"
+ artifice_unlocked_expert:0 "Expert Artificer Infrastructure"

@@ -1,0 +1,18 @@
+﻿l_english:
+ obj_beua_large_native_force:0 "Have Many Warriors"
+ obj_beua_large_native_force_desc:0 "Have a land force limit of at least 25."
+
+ obj_beua_50_development:0 "Develop your Nation"
+ obj_beua_50_development_desc:0 "Increase the development of your nation by at least 50."
+ 
+ obj_beua_competent_court:0 "Competent Court"
+ obj_beua_competent_court_desc:0 "Employ an advisor of each type with at least one being level 2 or higher."
+
+ obj_beua_audit_government:0 "Audit the Government"
+ obj_beua_audit_government_desc:0 "Have no loans, reduce Corruption to 0, and raise Stability to at least 2."
+ 
+ obj_beua_enlarge_crownland:0 "Enlarge Crownland"
+ obj_beua_enlarge_crownland_desc:0 "Increase the crown's ownership over the land to at least 50%."
+
+ obj_beua_magical_or_artificer_infrastructure:0 "Magical or Artificer Infrastructure"
+ obj_beua_magical_or_artificer_infrastructure_desc:0 "Have at least Magical Infrastructure III or Expert Artificer Infrastructure."

@@ -1,0 +1,193 @@
+spriteTypes = {
+	# Age of Monters Abilities Icons
+	spriteType = {
+		name = "GFX_beua_ages_monsters_hardened_soldiers"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_hardened_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_insecure_castles"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_insecure_castles.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_loyal_vassals"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_loyal_vassals.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_mercenary_discipline"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_mercenary_discipline.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_cheap_counsel"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_cheap_counsel.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_changing_world"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_changing_world.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_tyrant_acceptance"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_tyrant_acceptance.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_early_colonial_interest"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_early_colonial_interest.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_competent_diplomats"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_competent_diplomats.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_balanced_books"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_balanced_books.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_monsters_savvy_merchants"
+		texturefile = "gfx/interface/ages/beua_ages_monsters_savvy_merchants.dds"
+	}
+
+	# Age of Unraveling Abilities Icons
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_additional_missionary"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_additional_missionary.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_attentive_listening"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_attentive_listening.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_hardened_soldiers"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_hardened_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_persecution_migration"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_persecution_migration.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_accepting_new_ideas"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_accepting_new_ideas.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_secret_religion"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_secret_religion.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_god_over_country"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_god_over_country.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_converted_merchants"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_converted_merchants.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_like_minded_immigration"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_like_minded_immigration.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_colony_boost_development"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_colony_boost_development.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_religious_refugees"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_religious_refugees.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_unraveling_colonial_charter"
+		texturefile = "gfx/interface/ages/beua_ages_unraveling_colonial_charter.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_rival_change"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_rival_change.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_fervent_march"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_fervent_march.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_divine_right"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_divine_right.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_financial_opportunities"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_financial_opportunities.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_faster_trade_connections"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_faster_trade_connections.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_expel_minorities"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_expel_minorities.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_royal_endorsement_of_science"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_royal_endorsement_of_science.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_urgent_construction"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_urgent_construction.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_developing_economies"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_developing_economies.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_holy_kingdom"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_holy_kingdom.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_spy_networks"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_spy_networks.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_witchkings_slave_soldiers"
+		texturefile = "gfx/interface/ages/beua_ages_witchkings_slave_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_siege_blockades"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_siege_blockades.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_growing_bureaucracy"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_growing_bureaucracy.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_scurvy_cured"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_scurvy_cured.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_raise_taxes"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_raise_taxes.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_imperial_projects"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_imperial_projects.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_additional_diplomat"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_additional_diplomat.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_royal_navy"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_royal_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_quick_landings"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_quick_landings.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_large_empire"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_large_empire.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_tolerant_people"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_tolerant_people.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_international_missions"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_international_missions.dds"
+	}
+	spriteType = {
+		name = "GFX_beua_ages_artificers_scientific_academies"
+		texturefile = "gfx/interface/ages/beua_ages_artificers_scientific_academies.dds"
+	}
+}

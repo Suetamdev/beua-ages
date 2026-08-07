@@ -1,0 +1,117 @@
+########################################################
+####### Age Unraveling Threshold Bonuses         #######
+########################################################
+beua_ages_unraveling_threshold_bonuses_3 = {
+	potential = {
+		current_age = age_of_reformation
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 3
+			has_age_ability = ab_allow_religion_enforced
+			has_age_ability = ab_siege_blockades
+			has_age_ability = ab_warscore_vs_religion
+			has_age_ability = ab_ship_power_propagation
+			has_age_ability = ab_institution_spread_from_true_faith
+			has_age_ability = ab_prestige_per_development_from_conversion
+			has_age_ability = ab_adventurer_armies
+			has_age_ability = ab_call_of_the_high_seas
+			has_age_ability = beua_ages_unraveling_additional_missionary
+			has_age_ability = beua_ages_unraveling_attentive_listening
+			has_age_ability = beua_ages_unraveling_hardened_soldiers
+			has_age_ability = beua_ages_unraveling_persecution_migration
+			has_age_ability = beua_ages_unraveling_accepting_new_ideas
+			has_age_ability = beua_ages_unraveling_secret_religion
+			has_age_ability = beua_ages_unraveling_god_over_country
+			has_age_ability = beua_ages_unraveling_converted_merchants
+			has_age_ability = beua_ages_unraveling_like_minded_immigration
+			has_age_ability = beua_ages_unraveling_colony_boost_development
+			has_age_ability = beua_ages_unraveling_religious_refugees
+			has_age_ability = beua_ages_unraveling_colonial_charter
+			has_age_ability = ab_dwarovar_hold_redecorating
+			has_age_ability = ab_hemantian_reforms
+			has_age_ability = ab_aelantir_rush
+			has_age_ability = ab_ruinborn_empire
+		}
+	}
+	global_institution_spread = 0.15
+	development_cost = -0.05
+	land_morale = 0.05
+}
+
+beua_ages_unraveling_threshold_bonuses_6 = {
+	potential = {
+		current_age = age_of_reformation
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 6
+			has_age_ability = ab_allow_religion_enforced
+			has_age_ability = ab_siege_blockades
+			has_age_ability = ab_warscore_vs_religion
+			has_age_ability = ab_ship_power_propagation
+			has_age_ability = ab_institution_spread_from_true_faith
+			has_age_ability = ab_prestige_per_development_from_conversion
+			has_age_ability = ab_adventurer_armies
+			has_age_ability = ab_call_of_the_high_seas
+			has_age_ability = beua_ages_unraveling_additional_missionary
+			has_age_ability = beua_ages_unraveling_attentive_listening
+			has_age_ability = beua_ages_unraveling_hardened_soldiers
+			has_age_ability = beua_ages_unraveling_persecution_migration
+			has_age_ability = beua_ages_unraveling_accepting_new_ideas
+			has_age_ability = beua_ages_unraveling_secret_religion
+			has_age_ability = beua_ages_unraveling_god_over_country
+			has_age_ability = beua_ages_unraveling_converted_merchants
+			has_age_ability = beua_ages_unraveling_like_minded_immigration
+			has_age_ability = beua_ages_unraveling_colony_boost_development
+			has_age_ability = beua_ages_unraveling_religious_refugees
+			has_age_ability = beua_ages_unraveling_colonial_charter
+			has_age_ability = ab_dwarovar_hold_redecorating
+			has_age_ability = ab_hemantian_reforms
+			has_age_ability = ab_aelantir_rush
+			has_age_ability = ab_ruinborn_empire
+		}
+	}
+	governing_capacity_modifier = 0.15
+	advisor_cost = -0.10
+	reform_progress_growth = 0.10
+}
+
+beua_ages_unraveling_threshold_bonuses_9 = {
+	potential = {
+		current_age = age_of_reformation
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 9
+			has_age_ability = ab_allow_religion_enforced
+			has_age_ability = ab_siege_blockades
+			has_age_ability = ab_warscore_vs_religion
+			has_age_ability = ab_ship_power_propagation
+			has_age_ability = ab_institution_spread_from_true_faith
+			has_age_ability = ab_prestige_per_development_from_conversion
+			has_age_ability = ab_adventurer_armies
+			has_age_ability = ab_call_of_the_high_seas
+			has_age_ability = beua_ages_unraveling_additional_missionary
+			has_age_ability = beua_ages_unraveling_attentive_listening
+			has_age_ability = beua_ages_unraveling_hardened_soldiers
+			has_age_ability = beua_ages_unraveling_persecution_migration
+			has_age_ability = beua_ages_unraveling_accepting_new_ideas
+			has_age_ability = beua_ages_unraveling_secret_religion
+			has_age_ability = beua_ages_unraveling_god_over_country
+			has_age_ability = beua_ages_unraveling_converted_merchants
+			has_age_ability = beua_ages_unraveling_like_minded_immigration
+			has_age_ability = beua_ages_unraveling_colony_boost_development
+			has_age_ability = beua_ages_unraveling_religious_refugees
+			has_age_ability = beua_ages_unraveling_colonial_charter
+			has_age_ability = ab_dwarovar_hold_redecorating
+			has_age_ability = ab_hemantian_reforms
+			has_age_ability = ab_aelantir_rush
+			has_age_ability = ab_ruinborn_empire
+		}
+	}
+	loyalty_change_on_revoked = 0.5
+	technology_cost = -0.05
+	build_time = -0.1
+	global_autonomy = -0.1
+}

@@ -1,0 +1,488 @@
+age_of_revolutions = {
+	start = 1710
+	
+	can_start = {
+		is_institution_enabled = enlightenment
+	}
+	
+	papacy = 2.0
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		automatic_seat_in_parliament = -2 #1.35
+		manual_seat_in_parliament = -2 #1.35
+		war_exhaustion = -1
+	}
+	
+	objectives = {
+		obj_parliament = {
+			OR = {
+				has_parliament = yes
+				has_reform = amlharaz_reform
+			}
+		}
+		
+		obj_cultures_accepted = {
+			num_accepted_cultures = 5
+		}
+		
+		obj_large_subject = {
+			any_subject_country = {
+				total_development = 250
+			}
+		}
+		
+		obj_disc_army = {
+			has_global_modifier_value = {
+				which = discipline
+				value = 0.25
+				extra_shortcut = yes
+			}
+		}
+		
+		obj_huge_capital = {
+			capital_scope = {
+				development = 50
+			}
+		}
+		
+		obj_great_general = {
+			has_commanding_three_star = yes
+		}
+	
+		obj_two_institutions = {
+			num_of_owned_and_controlled_institutions = 2
+		}
+
+		########################################################
+		####### Beua Objectives	    	 			     #######
+		########################################################
+		obj_beua_magical_or_artificer_infrastructure = {
+			beua_has_advanced_magical_or_artificer_infrastructure = yes
+		}
+	}
+
+	abilities = {
+		########################################################
+		####### Anbennar Generic Abilities 			     #######
+		########################################################
+		ab_allow_anti_revolutionary_zeal = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				liberty_desire_from_subject_development = -0.33
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					factor = 0
+					NOT = {
+						any_subject_country = {
+							liberty_desire = 30
+						}
+					}
+				}
+			}
+			effect = {
+				beua_refund_splendor = { flagName = liberty_desire_from_subject_development flagCategory = liberty_desire }
+			}
+		}
+
+		ab_fortbreaker_inventions = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				artillery_levels_available_vs_fort = 3
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = siege flagName = artillery_levels_3 abilityName = ab_fortbreaker_inventions showTooltip = true }
+			}
+		}
+		
+		ab_force_march = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				force_march_free = yes
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = has_had_force_march flagCategory = force_march }
+			}
+		}
+
+		ab_more_ships_can_fire = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				global_naval_engagement_modifier = 0.20
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = navy flagName = global_naval_engagement_modifier abilityName = ab_more_ships_can_fire showTooltip = true }
+			}
+		}
+		
+		ab_no_distance_for_core = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				ignore_coring_distance = yes
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 15
+				modifier = {
+					# AI peace code relies on being limited by coring range, or it will create crazy border gore where it can't reach its new lands
+					factor = 0
+					OR = {
+						is_subject = no
+						overlord = {
+							ai = yes
+						}
+					}
+				}
+			}
+			effect = {
+				beua_refund_splendor = { flagName = has_had_conquest flagCategory = ignore_coring_distance }
+			}
+		}
+		
+		ab_backrow_artillery = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				backrow_artillery_damage = 0.20
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = backrow_artillery_damage flagCategory = artillery_damage }
+			}
+		}
+
+		ab_core_cost_2 = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				core_creation = -0.15
+				governing_capacity_modifier = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 15
+			}
+			effect = {
+				beua_refund_splendor = { flagName = core_cost flagCategory = core_cost }
+			}
+		}
+		
+		########################################################
+		####### Beua Ages abilities						 #######
+		########################################################
+		beua_ages_artificers_siege_blockades = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				siege_blockade_progress = 2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = {
+							num_of_ports = 5
+					}
+				}
+			}
+			effect = {
+				beua_refund_splendor = { flagName = siege_blockade_progress flagCategory = siege_blockade }
+			}
+		}
+		beua_ages_artificers_growing_bureaucracy = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				free_adm_policy = 1
+				free_dip_policy = 1
+				free_mil_policy = 1
+				possible_policy = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = free_policies flagCategory = policies }
+			}
+		}
+		beua_ages_artificers_scurvy_cured = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				transport_attrition = -0.5
+				naval_attrition = -0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+			effect = {
+				beua_refund_splendor = { flagName = naval_and_transport_attrition flagCategory = naval_attrition }
+			}
+		}
+		beua_ages_artificers_raise_taxes = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				global_tax_modifier = 0.15
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = economy flagName = raise_taxes abilityName = beua_ages_artificers_raise_taxes showTooltip = true }
+			}
+		}
+		beua_ages_artificers_imperial_projects = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				great_project_upgrade_cost = -0.30
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = monarchy flagName = great_project_upgrade_cost abilityName = beua_ages_artificers_imperial_projects showTooltip = true }
+			}
+		}
+		beua_ages_artificers_additional_diplomat = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				diplomats = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = diplomacy flagName = diplomat abilityName = beua_ages_artificers_additional_diplomat showTooltip = true }
+			}
+		}
+		beua_ages_artificers_royal_navy = {
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				navy_tradition = 1
+				heavy_ship_cost = -0.15
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+			effect = {
+				beua_refund_splendor = { flagName = navy_tradition_and_heavy_ship_cost flagCategory = navy_tradition_and_heavy_ship_cost }
+			}
+		}
+		beua_ages_artificers_quick_landings = {
+			modifier = {
+				movement_speed_onto_off_boat_modifier = 0.5
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+			effect = {
+				beua_refund_splendor = { flagName = movement_speed_onto_off_boat_modifier flagCategory = amphibious_assault }
+			}
+		}
+		beua_ages_artificers_large_empire = {
+			modifier = {
+				governing_capacity = 200
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = governing_capacity flagCategory = governing_capacity }
+			}
+		}
+		beua_ages_artificers_tolerant_people = {
+			modifier = {
+				num_accepted_cultures = 2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = num_accepted_cultures flagCategory = accepted_cultures }
+			}
+		}
+		beua_ages_artificers_international_missions = {
+			modifier = {
+				missionaries = 1
+				global_heathen_missionary_strength = 0.03
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = religion flagName = missionary_and_missionary_strength_vs_heathens abilityName = beua_ages_artificers_international_missions showTooltip = true }
+			}
+		}
+		beua_ages_artificers_scientific_academies = {
+			modifier = {
+				global_institution_spread = 0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = science flagName = institution_spread abilityName = beua_ages_artificers_scientific_academies showTooltip = true }
+			}
+		}
+
+		########################################################
+		####### Anbennar Region Abilities				 #######
+		########################################################
+		ab_surakesi_ersudarim = {
+			allow = {
+				culture_group = bulwari
+				num_of_owned_provinces_with = {
+					has_building = university 
+					value = 4 
+				}
+			}
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				technology_cost = -0.15
+				free_adm_policy = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_wide_plain_governance = {
+			allow = {
+				OR ={
+					culture = fathide_ogre
+					culture_group = triunic
+					culture_group = centaur
+				}
+			}
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				min_autonomy_in_territories = -0.15
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_camiran_consolidation = {
+			allow = {
+				OR ={
+					is_part_of_hre = yes
+					tag = Z01
+				}
+			}
+			effect = {
+				on_age_ability_taken = { age = age_of_revolutions }
+			}
+			modifier = {
+				imperial_authority = 0.15
+				yearly_corruption = -0.15
+				administrative_efficiency = 0.05
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_aelantir_relics = {
+			allow = {
+				NOT = {
+					is_colonial_nation = yes 
+				}
+				capital_scope = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				precursor_relics = 1
+			}
+			modifier = {
+				num_of_age_rewards = 1
+			}
+			effect = {
+				custom_tooltip = aelantir_relics_tt
+				on_age_ability_taken = { age = age_of_revolutions }
+				hidden_effect = {
+					update_artifice_points = yes
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}

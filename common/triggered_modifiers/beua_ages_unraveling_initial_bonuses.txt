@@ -1,0 +1,23 @@
+########################################################
+####### Age Unraveling Initial Bonuses           #######
+########################################################
+beua_ages_unraveling_bonus_corinite_crusaders = {
+	potential = {
+		current_age = age_of_reformation
+		religion = corinite
+	}
+	trigger = {
+	}
+	shock_damage = 0.1
+}
+
+beua_ages_unraveling_bonus_elven_reclaimers = {
+	potential = {
+		current_age = age_of_reformation
+		culture_group = elven
+	}
+	trigger = {
+	}
+	global_colonial_growth = 15
+	prestige = 0.25
+}

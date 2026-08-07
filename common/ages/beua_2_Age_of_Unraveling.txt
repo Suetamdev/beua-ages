@@ -1,0 +1,632 @@
+age_of_reformation = {
+	start = 1530
+
+	can_start = {
+		#is_religion_enabled = corinite
+		#After Greentide region is fine
+		if = { limit = { NOT = { has_global_flag = delete_cannor_region } }
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = castellos_is_dead_tooltip
+					has_global_flag = "castellos_is_dead"
+				}
+				is_year = 1560	#in case castellos never dies
+			}
+		}
+		else = {
+			is_year = 1530
+		}
+	}
+	
+	#What if Ravelianism starts in Aelantir? if so in general they should rise from coastal provinces too and those facing west
+	#Ravelianism could be more popular with the urban class? Peasants like the simplicity of the gods but historically christianity liked peasants
+	
+	religious_conflicts = yes
+	papacy = 1.25
+	
+	objectives = {
+		########################################################
+		####### Anbennar Objectives		 			     #######
+		########################################################
+		obj_cannorian_convert = {
+			allow = {
+				NOT = { religion_group = bulwari }
+			}
+			OR = {
+				religion = corinite
+				religion = ravelian
+				religion = dalcabba
+				religion = bulgu_orazan
+				religion = soise_vio
+				religion = nur_dahvaraesa
+				religion = gods_of_the_taychend_reformed
+				religion = ynn_river_reformed
+				religion = oren_nayiru_reformed
+				religion = suhans_praxis
+				religion = reformed_feast_of_the_gods
+				religion = kalyin_worshippers
+				religion = runefather_worship
+				religion = molten_eternity
+				AND = {
+					religion = dwarven_pantheon
+					OR = {
+						tag = F23
+						capital_scope = {
+							continent = serpentspine
+						}
+					}
+				}
+				any_owned_province = {
+					has_province_modifier = ravelian_lodge
+				}
+			}
+		}
+		
+		obj_sun_cult_unity = {
+			allow = {
+				religion_group = bulwari
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = obj_sun_cult_unity_jadd
+					AND = {
+						religion = the_jadd
+						has_global_flag = the_jadd_is_the_true_faith
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = obj_sun_cult_unity_nsc
+					AND = {
+						religion = bulwari_sun_cult
+						calc_true_if = {
+							amount = 4
+							is_incident_happened = incident_bulwar_under_threat
+							is_incident_happened = incident_naqtazan
+							is_incident_happened = incident_thirteenth_night
+							is_incident_happened = incident_death_of_taelarios
+							is_incident_happened = incident_summit_of_samartal
+							is_incident_happened = incident_call_of_aelantir
+							is_incident_happened = incident_silent_as_the_grave
+							is_incident_happened = incident_rise_of_artificery
+							is_incident_happened = incident_spread_of_ravelianism
+							is_incident_happened = incident_rebirth_magic
+							is_incident_happened = incident_half_a_king
+							is_incident_happened = incident_whisper_shadows
+							is_incident_happened = incident_trapped_in_shadows
+							is_incident_happened = incident_one_sun
+							is_incident_happened = incident_F80_kings_queens_kneeling
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = obj_sun_cult_unity_osc
+					AND = {
+						religion = old_bulwari_sun_cult
+						has_country_flag = osc_centralization_completed
+					}
+				}
+			}
+		}
+
+		obj_foothold_in_aelantir = {
+			allow = {
+				NOT = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = serpentspine }
+				}
+			}
+			OR = {
+				any_owned_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+					}
+				}
+				any_subject_country = {
+					any_owned_province = {
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+					}
+				}
+			}
+		}
+		
+		obj_convert_10_provinces = {
+			custom_trigger_tooltip = {
+				tooltip = obj_convert_10_provinces_tooltip
+				check_variable = { which = num_converted_religion value = 10 }
+			}
+		}
+		
+		obj_colonial_empire = {
+			colony = 5
+		}
+		
+		obj_force_converted = {
+			custom_trigger_tooltip = {
+				tooltip = obj_force_converted_tooltip
+				has_country_flag = force_converted
+			}
+		}
+		
+		obj_30_development_city = {
+			custom_trigger_tooltip = {
+				tooltip = obj_30_development_city_tooltip
+				any_owned_province = {
+					development_discounting_tribal = 30
+					is_core = ROOT
+					controlled_by = owner
+				}
+			}
+		}
+		
+		obj_two_continents = {
+			num_of_continents = 2
+		}
+
+		obj_dig_holds = {
+			allow = {
+				capital_scope = { continent = serpentspine }
+				NOT = { has_country_flag = blorc_plunder_capital_set }
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				hidden_trigger = { province_group = hold_province }
+				has_dwarven_hold_2 = yes
+			}
+		}
+
+		########################################################
+		####### Beua Objectives	    	 			     #######
+		########################################################
+		obj_beua_audit_government = {
+			beua_audit_government = yes
+		}
+	}	
+	
+	
+	abilities = {
+		########################################################
+		####### Anbennar Generic Abilities 			     #######
+		########################################################
+		ab_allow_religion_enforced = {
+			effect = {
+				custom_tooltip = religion_enforced_edict
+				set_country_flag = religion_enforced_edict
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_religion_enforced abilityName = ab_allow_religion_enforced flagCategory = state_edict }
+			}
+		}
+		ab_siege_blockades = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				siege_blockade_progress = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = {
+						num_of_ports = 5
+					}
+				}
+			}
+			effect = {
+				beua_refund_splendor = { flagName = siege_blockade_progress flagCategory = siege_blockade }
+			}
+		}
+		ab_warscore_vs_religion = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				warscore_cost_vs_other_religion = -0.25
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = religion_warscore flagCategory = religion_war }
+			}
+		}
+		ab_ship_power_propagation = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				ship_power_propagation = 0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = navy flagName = ship_power_propagation abilityName = ab_ship_power_propagation showTooltip = true }
+			}
+		}
+		ab_institution_spread_from_true_faith = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				institution_spread_from_true_faith = 0.5
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = institution_spread_religion flagCategory = institution_spread }
+			}
+		}
+		ab_prestige_per_development_from_conversion = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				prestige_per_development_from_conversion = 0.3
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = prestige_conversion flagCategory = prestige_conversion }
+			}
+		}
+		ab_adventurer_armies = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				adventurers_loyalty_modifier = 0.1
+				adventurers_influence_modifier = 0.1
+				leader_cost = -0.10
+				free_leader_pool = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = mercenary flagName = mercenary_discipline abilityName = ab_adventurer_armies showTooltip = true }
+			}
+		}
+		ab_call_of_the_high_seas = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				heavy_ship_cost = -0.5
+				light_ship_cost = -0.5
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = light_ship_cost_and_heavy_ship_cost flagCategory = light_ship_cost_and_heavy_ship_cost }
+			}
+		}
+		########################################################
+		####### Beua Ages abilities						 #######
+		########################################################
+		beua_ages_unraveling_additional_missionary = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				missionaries = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = additional_missionary flagCategory = additional_missionary }
+			}
+		}
+		beua_ages_unraveling_attentive_listening = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				global_missionary_strength = 0.03
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = religion flagName = missionary_strength abilityName = beua_ages_attentive_listening showTooltip = true }
+			}
+		}
+		beua_ages_unraveling_hardened_soldiers = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				land_attrition = -0.25
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = endurance flagName = reduced_attrition abilityName = beua_ages_hardened_soldiers showTooltip = true }
+			}
+		}
+		beua_ages_unraveling_persecution_migration = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				culture_conversion_cost = -0.25
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = culturalchange flagName = culture_conversion abilityName = beua_ages_persecution_migration showTooltip = true }
+			}
+		}
+		beua_ages_unraveling_accepting_new_ideas = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				idea_cost = -0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = science flagName = idea_cost abilityName = beua_ages_accepting_new_ideas showTooltip = true }
+			}
+		}
+		beua_ages_unraveling_secret_religion = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				spy_offence = 0.25
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = espionage flagName = spy_offence abilityName = beua_ages_secret_religion showTooltip = true }
+			}
+		}
+		beua_ages_unraveling_god_over_country = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				relation_with_same_religion = 25
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = diplomacy flagName = relation_with_same_religion abilityName = beua_ages_god_over_country showTooltip = true }
+			}
+		}
+		beua_ages_unraveling_converted_merchants = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				merchants = 1
+				trade_efficiency = 0.15
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = trade flagName = trade_efficiency_and_merchant abilityName = beua_ages_converted_merchants showTooltip = true }
+			}
+		}
+		beua_ages_unraveling_like_minded_immigration = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				development_cost = -0.1
+				build_cost = -0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = economy flagName = like_minded_immigration abilityName = beua_ages_like_minded_immigration showTooltip = true }
+			}
+		}
+		beua_ages_unraveling_colony_boost_development = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				colony_development_boost = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = { num_of_colonists = 1 }
+				}
+			}
+			effect = {
+				beua_refund_splendor = { flagName = colony_boost_development flagCategory = colony_boost_development }
+			}
+		}
+		beua_ages_unraveling_religious_refugees = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				global_colonial_growth = 30
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			effect = {
+				beua_refund_splendor = { flagName = colonial_growth flagCategory = colonial_growth }
+			}
+		}
+		beua_ages_unraveling_colonial_charter = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				colonists = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = colonization flagName = colonist abilityName = beua_ages_colonial_charter showTooltip = true }
+			}
+		}
+
+		########################################################
+		####### Anbennar Region Abilities				 #######
+		########################################################
+		ab_dwarovar_hold_redecorating = {
+			allow = {
+				OR = {
+					culture_group = goblin
+					culture_group = kobold
+				}
+				capital_scope = { continent = serpentspine }
+			}
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				build_cost = -0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_hemantian_reforms = {
+			allow = {
+				capital_scope = { superregion = rahen_superregion }
+				OR = {
+					culture_group = upper_raheni
+					culture_group = south_raheni
+					culture_group = middle_raheni
+					culture_group = harimari
+				}
+			}
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				reform_progress_growth = 0.20
+				global_prosperity_growth = 0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_aelantir_rush = {
+			allow = {
+				num_of_colonists = 1
+				OR = {
+					north_america = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					south_america = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			modifier = {
+				colony_development_boost = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		ab_ruinborn_empire = {
+			allow = {
+				OR = {
+					# south aelantir
+					tag = H22 #Kheios
+					tag = J84 #Taychendi Empire
+					tag = U39 #Orenvalyam
+					tag = J99 #Validaunea
+					tag = U27 #Theinos
+					tag = G20 #Araya
+					tag = H00 #Saerraeg
+					tag = G52 #Ameion
+					tag = J93 #Hinediu Yulas
+					AND = { #Eltikan
+						tag = G60
+						government_rank = 3
+					}
+
+					# north aelantir
+					tag = H27 #Ynnic Empire
+					tag = U69 #Sarda
+					tag = U70 #Dolindha
+					tag = U71 #Rzenta
+					tag = H21 #Eordand
+					tag = U28 #Kooyahse
+					tag = U22 #Veykodirzag
+					tag = U48 #Cataboek
+					tag = H24 #Dragon Dominion
+					AND = { #Haraf
+						tag = G43
+						NOT = {
+							government = native
+						}
+					}
+				}
+			}
+			modifier = {
+				centralize_state_cost = -0.5
+				num_of_age_rewards = 1
+			}
+			effect = {
+				custom_tooltip = ab_dev_from_centralising_tt
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+}

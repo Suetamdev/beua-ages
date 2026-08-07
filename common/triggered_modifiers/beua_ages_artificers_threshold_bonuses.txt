@@ -1,0 +1,114 @@
+########################################################
+####### Age Artificers Threshold Bonuses         #######
+########################################################
+beua_ages_unraveling_threshold_bonuses_3 = {
+	potential = {
+		current_age = age_of_revolutions
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 3
+            has_age_ability = ab_allow_anti_revolutionary_zeal
+            has_age_ability = ab_fortbreaker_inventions
+            has_age_ability = ab_force_march
+            has_age_ability = ab_more_ships_can_fire
+            has_age_ability = ab_no_distance_for_core
+            has_age_ability = ab_backrow_artillery
+            has_age_ability = ab_core_cost_2
+            has_age_ability = beua_ages_artificers_siege_blockades
+            has_age_ability = beua_ages_artificers_growing_bureaucracy
+            has_age_ability = beua_ages_artificers_scurvy_cured
+            has_age_ability = beua_ages_artificers_raise_taxes
+            has_age_ability = beua_ages_artificers_imperial_projects
+            has_age_ability = beua_ages_artificers_additional_diplomat
+            has_age_ability = beua_ages_artificers_royal_navy
+            has_age_ability = beua_ages_artificers_quick_landings
+            has_age_ability = beua_ages_artificers_large_empire
+            has_age_ability = beua_ages_artificers_tolerant_people
+            has_age_ability = beua_ages_artificers_international_missions
+            has_age_ability = beua_ages_artificers_scientific_academies
+            has_age_ability = ab_surakesi_ersudarim
+            has_age_ability = ab_wide_plain_governance
+            has_age_ability = ab_camiran_consolidation
+            has_age_ability = ab_aelantir_relics
+        }
+	}
+	production_efficiency = 0.05
+	administrative_efficiency = 0.05
+	all_estate_loyalty_equilibrium = 0.05
+}
+
+beua_ages_unraveling_threshold_bonuses_6 = {
+	potential = {
+		current_age = age_of_revolutions
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 6
+            has_age_ability = ab_allow_anti_revolutionary_zeal
+            has_age_ability = ab_fortbreaker_inventions
+            has_age_ability = ab_force_march
+            has_age_ability = ab_more_ships_can_fire
+            has_age_ability = ab_no_distance_for_core
+            has_age_ability = ab_backrow_artillery
+            has_age_ability = ab_core_cost_2
+            has_age_ability = beua_ages_artificers_siege_blockades
+            has_age_ability = beua_ages_artificers_growing_bureaucracy
+            has_age_ability = beua_ages_artificers_scurvy_cured
+            has_age_ability = beua_ages_artificers_raise_taxes
+            has_age_ability = beua_ages_artificers_imperial_projects
+            has_age_ability = beua_ages_artificers_additional_diplomat
+            has_age_ability = beua_ages_artificers_royal_navy
+            has_age_ability = beua_ages_artificers_quick_landings
+            has_age_ability = beua_ages_artificers_large_empire
+            has_age_ability = beua_ages_artificers_tolerant_people
+            has_age_ability = beua_ages_artificers_international_missions
+            has_age_ability = beua_ages_artificers_scientific_academies
+            has_age_ability = ab_surakesi_ersudarim
+            has_age_ability = ab_wide_plain_governance
+            has_age_ability = ab_camiran_consolidation
+            has_age_ability = ab_aelantir_relics
+        }
+	}
+	artillery_power = 0.05
+	core_creation = -0.1
+	global_trade_power = 0.05
+}
+
+beua_ages_unraveling_threshold_bonuses_9 = {
+	potential = {
+		current_age = age_of_revolutions
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 9
+            has_age_ability = ab_allow_anti_revolutionary_zeal
+            has_age_ability = ab_fortbreaker_inventions
+            has_age_ability = ab_force_march
+            has_age_ability = ab_more_ships_can_fire
+            has_age_ability = ab_no_distance_for_core
+            has_age_ability = ab_backrow_artillery
+            has_age_ability = ab_core_cost_2
+            has_age_ability = beua_ages_artificers_siege_blockades
+            has_age_ability = beua_ages_artificers_growing_bureaucracy
+            has_age_ability = beua_ages_artificers_scurvy_cured
+            has_age_ability = beua_ages_artificers_raise_taxes
+            has_age_ability = beua_ages_artificers_imperial_projects
+            has_age_ability = beua_ages_artificers_additional_diplomat
+            has_age_ability = beua_ages_artificers_royal_navy
+            has_age_ability = beua_ages_artificers_quick_landings
+            has_age_ability = beua_ages_artificers_large_empire
+            has_age_ability = beua_ages_artificers_tolerant_people
+            has_age_ability = beua_ages_artificers_international_missions
+            has_age_ability = beua_ages_artificers_scientific_academies
+            has_age_ability = ab_surakesi_ersudarim
+            has_age_ability = ab_wide_plain_governance
+            has_age_ability = ab_camiran_consolidation
+            has_age_ability = ab_aelantir_relics
+        }
+	}
+	artillery_level_modifier = 0.1
+	yearly_government_power = 0.5
+	mercenary_discipline = 0.05
+	special_unit_forcelimit = 0.1
+}

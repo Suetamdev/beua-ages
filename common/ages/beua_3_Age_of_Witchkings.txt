@@ -1,0 +1,524 @@
+age_of_absolutism = {
+	start = 1620
+	
+	can_start = {
+		is_institution_enabled = global_trade
+	}
+	
+	papacy = 1.5
+	
+	absolutism = {
+		harsh_treatment = 1
+		stability = 1
+		decrease_autonomy_command = 1
+		strengthen_government = 2
+		
+		increase_autonomy_command = -2
+		debase_currency = -1
+		execute_rebel_acceptance_command = -10
+		automatic_seat_in_parliament = -2 #1.35
+		manual_seat_in_parliament = -2 #1.35
+		war_exhaustion = -1
+	}
+
+	religious_conflicts = yes # Anbennar
+	
+	objectives = {
+		########################################################
+		####### Anbennar Objectives		 			     #######
+		########################################################
+		obj_3_trade_companies = {
+			num_of_trade_companies = 3
+		}
+		
+		obj_universities = { #1.35
+			num_of_owned_provinces_with = {
+				has_building = university 
+				value = 5 
+			}
+		}
+	
+		obj_large_forcelimit = {
+			land_forcelimit = 200
+		}
+		
+		obj_90_absolutism = {
+			absolutism = 90
+		}
+		
+		obj_mage_ruler = {
+			ruler_is_powerful_mage = yes
+		}
+		
+		obj_emperor_2 = {
+			OR = {	
+				is_emperor = yes
+				government_rank = 3
+				is_emperor_of_china = yes
+			}
+		}
+		
+		obj_win_religious_war = {
+			allow = {
+				NOT = { capital_scope = { superregion = bulwar_superregion } }
+			}
+			custom_trigger_tooltip = {
+				tooltip = obj_religious_league_war_on_winning_side_tooltip
+				has_country_flag = religious_league_war_on_winning_side
+			}
+		}
+
+		obj_bulwar_gardening = {
+			allow = {
+				capital_scope = { superregion = bulwar_superregion }
+			}
+			num_of_owned_provinces_with = {
+				value = 20
+				superregion = bulwar_superregion
+				development = 25
+			}
+		}
+
+		########################################################
+		####### Beua Objectives	    	 			     #######
+		########################################################
+		obj_beua_enlarge_crownland = {
+			beua_large_crownland = yes
+		}
+	}	
+	
+	abilities = {
+		########################################################
+		####### Anbennar Generic Abilities 			     #######
+		########################################################
+		ab_allow_edict_of_absolutism = {
+			effect = {
+				custom_tooltip = edict_of_absolutism_tt
+				set_country_flag = edict_of_absolutism
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_edict_of_absolutism abilityName = ab_allow_edict_of_absolutism flagCategory = state_edict }
+			}
+		}
+		ab_core_cost = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				core_creation = -0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			effect = {
+				beua_refund_splendor = { flagName = core_cost flagCategory = core_cost }
+			}
+		}
+		ab_rival_border_fort = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				defensiveness = 0.10
+				fort_maintenance_modifier = -0.25
+				rival_border_fort_maintenance = -1.0
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = siege flagName = rival_border_fort abilityName = ab_rival_border_fort showTooltip = true }
+			}
+		}
+		ab_autonomy = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				autonomy_change_time = -0.5
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = autonomy_change_time flagCategory = autonomy_change_time }
+			}
+		}
+		ab_harsh_treatment = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				harsh_treatment_cost = -0.5
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = docile flagName = harsh_treatment_cost abilityName = ab_harsh_treatment showTooltip = true }
+			}
+		}
+		ab_adm_efficiency = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				administrative_efficiency = 0.05
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = administrative_efficiency flagCategory = administrative_efficiency }
+			}
+		}
+		ab_yearly_absolutism = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				yearly_absolutism = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+			effect = {
+				beua_refund_splendor = { flagName = yearly_absolutism flagCategory = yearly_absolutism }
+			}
+		}
+		########################################################
+		####### Beua Ages abilities						 #######
+		########################################################
+		beua_ages_witchkings_rival_change = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				rival_change_cost = -0.5
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			effect = {
+				beua_refund_splendor = { flagName = rival_change_cost flagCategory = rival_change_cost }
+			}
+		}
+		beua_ages_witchkings_fervent_march = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				movement_speed = 0.25
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = endurance flagName = movement_speed abilityName = beua_ages_witchkings_fervent_march showTooltip = true }
+			}
+		}
+		beua_ages_witchkings_divine_right = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				country_military_power = 1
+				prestige = 0.5
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = monarchy flagName = divine_right abilityName = beua_ages_witchkings_divine_right showTooltip = true }
+			}
+		}
+		beua_ages_witchkings_financial_opportunities = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				merchants = 1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = trade flagName = merchant abilityName = beua_ages_witchkings_financial_opportunities showTooltip = true }
+			}
+		}
+		beua_ages_witchkings_faster_trade_connections = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				trade_efficiency = 0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = navy flagName = trade_efficiency abilityName = beua_ages_witchkings_faster_trade_connections showTooltip = true }
+			}
+		}
+		beua_ages_witchkings_expel_minorities = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				expel_minorities_cost = -0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = culturalchange flagName = expel_minorities_cost abilityName = beua_ages_witchkings_expel_minorities showTooltip = true }
+			}
+		}
+		beua_ages_witchkings_royal_endorsement_of_science = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				global_institution_spread = 0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = science flagName = institution_spread abilityName = beua_ages_witchkings_royal_endorsement_of_science showTooltip = true }
+			}
+		}
+		beua_ages_witchkings_urgent_construction = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				build_time = -0.25
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = build_time flagCategory = build_time }
+			}
+		}
+		beua_ages_witchkings_developing_economies = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				development_cost = -0.1
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = economy flagName = development_cost abilityName = beua_ages_witchkings_developing_economies showTooltip = true }
+			}
+		}
+		beua_ages_witchkings_holy_kingdom = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				yearly_corruption = -0.25
+				global_spy_defence = 0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = religion flagName = corruption_spydefence abilityName = beua_ages_witchkings_holy_kingdom showTooltip = true }
+			}
+		}
+		beua_ages_witchkings_spy_networks = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				spy_offence = 0.2
+				num_of_age_rewards = 1
+			}
+			effect = {
+				beua_add_or_upgrade_bonus = { bonusName = espionage flagName = spy_offence abilityName = beua_ages_witchkings_spy_networks showTooltip = true }
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		beua_ages_witchkings_slave_soldiers = {
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				manpower_recovery_speed = 0.2
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			effect = {
+				beua_refund_splendor = { flagName = manpower_recovery_speed flagCategory = improved_manpower }
+			}
+		}
+
+		########################################################
+		####### Anbennar Region Abilities				 #######
+		########################################################
+		ab_direct_rule_in_escann = {
+			allow = {
+				if = {
+					limit = {
+						tag = B34
+					}
+					OR = {
+						OR = {
+							capital_scope = { region = west_castanor_region }
+							capital_scope = { region = south_castanor_region }
+							capital_scope = { region = inner_castanor_region }
+						}
+						AND = {
+							tag = B34
+							capital = 350
+						}
+					}
+				}
+				else = {
+					OR = {
+						capital_scope = { region = west_castanor_region }
+						capital_scope = { region = south_castanor_region }
+						capital_scope = { region = inner_castanor_region }
+					}
+				}
+			}
+			effect = {
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				yearly_absolutism = 2
+				max_absolutism = 10
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 1000
+			}
+		}
+		ab_dwarven_reclamation = {
+			allow = {
+				culture_group = dwarven
+				capital_scope = { continent = serpentspine }
+			}
+			effect = {
+				custom_tooltip = ab_dwarven_reclamation_tooltip
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 1000
+			}
+		}
+		ab_sun_cult_resurgence = {
+			allow = {
+				OR = {
+					religion = bulwari_sun_cult
+					religion = old_bulwari_sun_cult
+					religion = the_jadd
+					AND = {
+						OR = {
+							culture = siadunan_harpy
+							culture = firanyan_harpy
+						}
+						OR = {
+							secondary_religion = bulwari_sun_cult
+							secondary_religion = old_bulwari_sun_cult
+							secondary_religion = the_jadd
+						}
+					}
+				}
+				government_rank = 3
+			}
+			effect = {
+				custom_tooltip = age_ability_sun_cult_resurgence_flag_tt
+				on_age_ability_taken = { age = age_of_absolutism }
+			}
+			modifier = {
+				num_of_age_rewards = 1
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		ab_splintered_lands = {
+			allow = {
+				if = {
+					limit = {
+						OR = {
+							tag = S50
+							has_country_flag = S50_splintered_lands_age_ability
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = S50_splintered_lands_age_ability_trigger_tt
+						has_country_flag = S50_splintered_lands_age_ability
+					}
+				}
+				else = {
+					OR = {
+						tag = S79 #Umoji Baashi
+						tag = L59 #Bwa Tanizu
+						tag = S81 #333rd
+						tag = L87 #Adzalan
+						tag = L65 #Melakmengi
+						tag = F64 #Prakheta
+						tag = L31 #Irsukumbha
+						tag = L23 #Fangaula
+						tag = F66 #Konolkhatep
+						tag = S72 #Vyoronsi
+						tag = S90 #Umbral Covenant
+						tag = U47 #Shyarayan
+					}
+				}
+
+			}
+			modifier = {
+				years_of_nationalism = -5
+				mil_advisor_cost = -0.5
+				num_of_age_rewards = 1
+			}
+			effect = {
+				custom_tooltip = ab_splintered_lands_tooltip
+				on_age_ability_taken = { age = age_of_absolutism }
+				set_country_flag = early_imperialism_flag
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}
+

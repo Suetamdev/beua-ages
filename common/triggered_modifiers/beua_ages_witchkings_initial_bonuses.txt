@@ -1,0 +1,14 @@
+########################################################
+####### Age Witchkings Initial Bonuses           #######
+########################################################
+beua_ages_witchkings_bonus_dwarovar_rebirth = {
+	potential = {
+		current_age = age_of_absolutism
+		culture_group = dwarven
+		capital_scope = { continent = serpentspine }
+	}
+	trigger = {
+	}
+	global_colonial_growth = 10
+	colonists = 1
+}

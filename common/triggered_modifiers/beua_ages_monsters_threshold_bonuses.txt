@@ -1,0 +1,114 @@
+########################################################
+####### Age Discovery Threshold Bonuses          #######
+########################################################
+beua_ages_monsters_threshold_bonuses_3 = {
+	potential = {
+		current_age = age_of_discovery
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 3
+			has_age_ability = ab_allow_feudal_de_jure_law
+			has_age_ability = ab_justified_wars
+			has_age_ability = ab_transfer_vassal_wargoal
+			has_age_ability = ab_free_war_taxes
+			has_age_ability = ab_cavalry_armies
+			has_age_ability = ab_colony_boost_development
+			has_age_ability = ab_attack_bonus_in_capital_terrain
+			has_age_ability = beua_ages_monsters_hardened_soldiers
+			has_age_ability = beua_ages_monsters_insecure_castles
+			has_age_ability = beua_ages_monsters_loyal_vassals
+			has_age_ability = beua_ages_monsters_mercenary_discipline
+			has_age_ability = beua_ages_monsters_cheap_counsel
+			has_age_ability = beua_ages_monsters_changing_world
+			has_age_ability = beua_ages_monsters_tyrant_acceptance
+			has_age_ability = beua_ages_monsters_early_colonial_interest
+			has_age_ability = beua_ages_monsters_competent_diplomats
+			has_age_ability = beua_ages_monsters_balanced_books
+			has_age_ability = beua_ages_monsters_savvy_merchants
+			has_age_ability = ab_anbennar_decentralization_of_the_empire
+			has_age_ability = ab_dwarovar_empire_breakers
+			has_age_ability = ab_monstrous_rule
+			has_age_ability = ab_ringlet_trade
+			has_age_ability = ab_nascent_civilization
+		}
+	}
+	global_colonial_growth = 15
+	production_efficiency = 0.05
+	land_morale = 0.05
+}
+
+beua_ages_monsters_threshold_bonuses_6 = {
+	potential = {
+		current_age = age_of_discovery
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 6
+			has_age_ability = ab_allow_feudal_de_jure_law
+			has_age_ability = ab_justified_wars
+			has_age_ability = ab_transfer_vassal_wargoal
+			has_age_ability = ab_free_war_taxes
+			has_age_ability = ab_cavalry_armies
+			has_age_ability = ab_colony_boost_development
+			has_age_ability = ab_attack_bonus_in_capital_terrain
+			has_age_ability = beua_ages_monsters_hardened_soldiers
+			has_age_ability = beua_ages_monsters_insecure_castles
+			has_age_ability = beua_ages_monsters_loyal_vassals
+			has_age_ability = beua_ages_monsters_mercenary_discipline
+			has_age_ability = beua_ages_monsters_cheap_counsel
+			has_age_ability = beua_ages_monsters_changing_world
+			has_age_ability = beua_ages_monsters_tyrant_acceptance
+			has_age_ability = beua_ages_monsters_early_colonial_interest
+			has_age_ability = beua_ages_monsters_competent_diplomats
+			has_age_ability = beua_ages_monsters_balanced_books
+			has_age_ability = beua_ages_monsters_savvy_merchants
+			has_age_ability = ab_anbennar_decentralization_of_the_empire
+			has_age_ability = ab_dwarovar_empire_breakers
+			has_age_ability = ab_monstrous_rule
+			has_age_ability = ab_ringlet_trade
+			has_age_ability = ab_nascent_civilization
+		}
+	}
+	advisor_pool = 1
+	liberty_desire_from_subject_development = -0.05
+	infantry_power = 0.05
+}
+
+beua_ages_monsters_threshold_bonuses_9 = {
+	potential = {
+		current_age = age_of_discovery
+	}
+	trigger = {
+		calc_true_if = {
+			amount = 9
+			has_age_ability = ab_allow_feudal_de_jure_law
+			has_age_ability = ab_justified_wars
+			has_age_ability = ab_transfer_vassal_wargoal
+			has_age_ability = ab_free_war_taxes
+			has_age_ability = ab_cavalry_armies
+			has_age_ability = ab_colony_boost_development
+			has_age_ability = ab_attack_bonus_in_capital_terrain
+			has_age_ability = beua_ages_monsters_hardened_soldiers
+			has_age_ability = beua_ages_monsters_insecure_castles
+			has_age_ability = beua_ages_monsters_loyal_vassals
+			has_age_ability = beua_ages_monsters_mercenary_discipline
+			has_age_ability = beua_ages_monsters_cheap_counsel
+			has_age_ability = beua_ages_monsters_changing_world
+			has_age_ability = beua_ages_monsters_tyrant_acceptance
+			has_age_ability = beua_ages_monsters_early_colonial_interest
+			has_age_ability = beua_ages_monsters_competent_diplomats
+			has_age_ability = beua_ages_monsters_balanced_books
+			has_age_ability = beua_ages_monsters_savvy_merchants
+			has_age_ability = ab_anbennar_decentralization_of_the_empire
+			has_age_ability = ab_dwarovar_empire_breakers
+			has_age_ability = ab_monstrous_rule
+			has_age_ability = ab_ringlet_trade
+			has_age_ability = ab_nascent_civilization
+		}
+	}
+	all_estate_loyalty_equilibrium = 0.05
+	all_power_cost = -0.025
+	discipline = 0.025
+	global_unrest = -1
+}

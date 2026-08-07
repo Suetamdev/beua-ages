@@ -1,0 +1,83 @@
+########################################################
+####### Locations	                             #######
+########################################################
+beua_capital_in_aelantir = {
+    capital_scope = {
+        OR = {
+            continent = north_america
+            continent = south_america
+        }
+    }
+}
+
+beua_discover_aelantir = {
+    OR = {
+        north_america = { has_discovered = ROOT }
+        south_america = { has_discovered = ROOT }
+        new_world = { has_discovered = ROOT }
+    }
+}
+
+beua_capital_in_serpentspine = {
+    capital_scope = {
+        continent = serpentspine
+    }
+}
+
+beua_capital_in_forbidden_lands = {
+    capital_scope = {
+        superregion = forbidden_lands_superregion
+    }
+}
+
+beua_capital_in_insyaa = {
+    capital_scope = {
+        continent = oceania
+    }
+}
+
+########################################################
+####### Age of Discover                          #######
+########################################################
+beua_competent_court = {
+    employed_advisor = { category = ADM }
+    employed_advisor = { category = DIP }
+    employed_advisor = { category = MIL }
+
+    OR = {
+        has_adm_advisor_2 = yes
+        has_dip_advisor_2 = yes
+        has_mil_advisor_2 = yes
+    }
+}
+
+########################################################
+####### Age of Unraveling                        #######
+########################################################
+beua_audit_government = {
+    NOT = {
+        corruption = 0.1
+        num_of_loans = 1
+    }
+    stability = 2
+}
+
+########################################################
+####### Age of Witchkings                        #######
+########################################################
+beua_large_crownland = {
+    crown_land_share = 50
+}
+
+########################################################
+####### Age of Artificiers                       #######
+########################################################
+beua_has_advanced_magical_or_artificer_infrastructure = {
+    OR = {
+        OR = {
+            has_country_modifier = magical_infrastructure_3
+            has_country_modifier = magical_infrastructure_4
+        }
+        has_country_flag = artifice_unlocked_expert
+    }
+}

@@ -1,0 +1,94 @@
+﻿l_english:
+ # Age Monsters Initial Bonuses
+ beua_ages_monsters_bonus_eborthil_ship_trade:0 "Masters of Shipbuilding"
+ beua_ages_monsters_bonus_decentralize_anbennar:0 "Decentralization Efforts"
+
+ # Age Monsters Threshold Bonuses
+ beua_ages_monsters_threshold_bonuses_3:0 "Rising Dominance"
+ beua_ages_monsters_threshold_bonuses_3_desc:0 "The turmoil of this age has created opportunities for the bold. Whether through conquest, diplomacy, or sheer determination, our realm has begun to establish itself as a force that cannot be ignored."
+ beua_ages_monsters_threshold_bonuses_6:0 "Forged in Conflict"
+ beua_ages_monsters_threshold_bonuses_6_desc:0 "The constant struggles of this age have tempered our nation. Every challenge overcome has strengthened our institutions, our people, and our claim to greatness in a world where only the strong endure."
+ beua_ages_monsters_threshold_bonuses_9:0 "Masters of the Age"
+ beua_ages_monsters_threshold_bonuses_9_desc:0 "Few can rival the influence our realm now commands. Through strength, ambition, and perseverance, we have shaped the course of this turbulent age, leaving a legacy that will endure long after its conflicts have faded."
+ 
+ # Age Unraveling Initial Bonuses
+ beua_ages_unraveling_bonus_corinite_crusaders:0 "Corinite Crusaders"
+ beua_ages_unraveling_bonus_elven_reclaimers:0 "Elven Reclaimers"
+
+ # Age Unraveling Threshold Bonuses
+ beua_ages_unraveling_threshold_bonuses_3:0 "Threads Unraveling"
+ beua_ages_unraveling_threshold_bonuses_3_desc:0 "The foundations of the old order have begun to fray. Faiths clash, ancient certainties are questioned, and distant horizons draw the ambitious forward. Amid the growing upheaval, our realm has begun to find its place in the world taking shape."
+ beua_ages_unraveling_threshold_bonuses_6:0 "Shattered Certainties"
+ beua_ages_unraveling_threshold_bonuses_6_desc:0 "What once seemed eternal now lies broken or transformed. Religious upheaval, expanding frontiers, and the return of forgotten powers have reshaped the world around us. Rather than be swept aside by these changes, our nation has learned to thrive among them."
+ beua_ages_unraveling_threshold_bonuses_9:0 "Weavers of a New Age"
+ beua_ages_unraveling_threshold_bonuses_9_desc:0 "The threads binding the old world have come undone, yet from their remnants a new order is being woven. Through faith, ambition, discovery, and strength, our realm has risen beyond merely enduring the Unraveling—we now stand among those who will determine what follows."
+
+ # Age Witchkings Initial Bonuses
+ beua_ages_witchkings_bonus_dwarovar_rebirth:0 "Dwarovar Rebirth"
+
+ # Age Witchkings Threshold Bonuses
+ beua_ages_witchkings_threshold_bonuses_3:0 "Consolidation of Power"
+ beua_ages_witchkings_threshold_bonuses_3_desc:0 "The foundations of enduring rule have been laid. Whether through ancient bloodlines, republican tradition, divine mandate, or magical authority, our government commands unquestioned legitimacy, allowing the realm to weather any challenge with unwavering stability."
+ beua_ages_witchkings_threshold_bonuses_6:0 "Unyielding Dominion"
+ beua_ages_witchkings_threshold_bonuses_6_desc:0 "Our authority now reaches every corner of the realm. Loyal subjects, disciplined armies, and an incorruptible administration ensure that no internal weakness can threaten the strength of our dominion."
+ beua_ages_witchkings_threshold_bonuses_9:0 "Imperium Eternal"
+ beua_ages_witchkings_threshold_bonuses_9_desc:0 "Our realm has become the embodiment of absolute rule. Revered by allies, feared by rivals, and guided by an unshakable government, our empire stands among the defining powers of the Age of Witch-Kings, destined to shape the course of history."
+ 
+ # Age Artificers Initial Bonuses
+ beua_ages_artificers_bonus_orcish_nation:0 "Orcish Nation"
+ beua_ages_artificers_bonus_anbennarian_resurgence:0 "Anbennarian Resurgence" 
+
+ # Age Artificers Threshold Bonuses
+ beua_ages_artificers_threshold_bonuses_3:0 "Age of Innovation"
+ beua_ages_artificers_threshold_bonuses_3_desc:0 "The discoveries of generations have begun to bear fruit. Workshops hum with invention, scholars push beyond the limits of established knowledge, and artificers transform once-impossible ideas into practical reality. Our nation stands at the forefront of a new era of progress."
+ beua_ages_artificers_threshold_bonuses_6:0 "Industrial Ascendancy"
+ beua_ages_artificers_threshold_bonuses_6_desc:0 "Innovation now shapes every aspect of our realm. Vast foundries, advanced infrastructure, and disciplined administration sustain an economy capable of supporting armies, fleets, and cities on a scale unseen in previous ages. Prosperity and power reinforce one another."
+ beua_ages_artificers_threshold_bonuses_9:0 "Masters of the New Era"
+ beua_ages_artificers_threshold_bonuses_9_desc:0 "The future belongs to those who dare to redefine it. Through unrivaled technological achievement, artificery, and enlightened governance, our nation has risen above the struggles of the past. The world no longer merely adapts to change—it follows the course that we have set."
+
+ # Dynamic Abilities Modifiers
+ beua_ages_trade_1:0 "Eager to Trade"
+ beua_ages_trade_2:0 "Eager to Trade"
+ beua_ages_trade_3:0 "History of Trade"
+ beua_ages_endurance_1:0 "Endurance"
+ beua_ages_endurance_2:0 "Endurance"
+ beua_ages_endurance_3:0 "History of Endurance"
+ beua_ages_culturalchange_1:0 "Cultural Change"
+ beua_ages_culturalchange_2:0 "Cultural Change"
+ beua_ages_culturalchange_3:0 "History of Cultural Change"
+ beua_ages_diplomacy_1:0 "Interest in Diplomacy"
+ beua_ages_diplomacy_2:0 "Interest in Diplomacy"
+ beua_ages_diplomacy_3:0 "History of Diplomacy"
+ beua_ages_espionage_1:0 "Counterintelligence"
+ beua_ages_espionage_2:0 "Counterintelligence"
+ beua_ages_espionage_3:0 "History of Espionage"
+ beua_ages_colonization_1:0 "Colonizer"
+ beua_ages_colonization_2:0 "Colonizer"
+ beua_ages_colonization_3:0 "History of Colonization"
+ beua_ages_religion_1:0 "Zealous"
+ beua_ages_religion_2:0 "Zealous"
+ beua_ages_religion_3:0 "History of Religious Fervor"
+ beua_ages_edicts_1:0 "State Management"
+ beua_ages_edicts_2:0 "State Management"
+ beua_ages_edicts_3:0 "Beaureaucratic History"
+ beua_ages_siege_1:0 "Siege Experts"
+ beua_ages_siege_2:0 "Siege Experts"
+ beua_ages_siege_3:0 "History of Siege Expertise"
+ beua_ages_economy_1:0 "Economic Growth"
+ beua_ages_economy_2:0 "Economic Growth"
+ beua_ages_economy_3:0 "History of Economic Growth"
+ beua_ages_navy_1:0 "Naval Prowess"
+ beua_ages_navy_2:0 "Naval Prowess"
+ beua_ages_navy_3:0 "History of Naval Expertise"
+ beua_ages_science_1:0 "Scientific Innovation"
+ beua_ages_science_2:0 "Scientific Innovation"
+ beua_ages_science_3:0 "Innovative History"
+ beua_ages_monarchy_1:0 "Monarchist"
+ beua_ages_monarchy_2:0 "Monarchist"
+ beua_ages_monarchy_3:0 "History of Royalism"
+ beua_ages_docile_1:0 "Docile Populace"
+ beua_ages_docile_2:0 "Docile Populace"
+ beua_ages_docile_3:0 "History of Submission"
+ beua_ages_mercenary_1:0 "Professional Mercenaries"
+ beua_ages_mercenary_2:0 "Professional Mercenaries"
+ beua_ages_mercenary_3:0 "History of Mercenary Usage"

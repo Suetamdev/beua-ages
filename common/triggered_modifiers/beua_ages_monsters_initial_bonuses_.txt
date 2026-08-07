@@ -1,0 +1,22 @@
+########################################################
+####### Age Monsters Initial Bonuses             #######
+########################################################
+beua_ages_monsters_bonus_decentralize_anbennar = {
+	potential = {
+		current_age = age_of_discovery
+		is_part_of_hre = yes
+	}
+	trigger = {
+	}
+	ae_impact = -0.05
+}
+
+beua_ages_monsters_bonus_eborthil_ship_trade = {
+	potential = {
+		current_age = age_of_discovery
+		tag = A47
+	}
+	trigger = {
+	}
+	global_ship_trade_power = 0.15
+}
