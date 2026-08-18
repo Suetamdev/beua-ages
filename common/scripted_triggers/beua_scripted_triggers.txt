@@ -10,29 +10,42 @@ beua_capital_in_aelantir = {
     }
 }
 
-beua_discover_aelantir = {
-    OR = {
-        north_america = { has_discovered = ROOT }
-        south_america = { has_discovered = ROOT }
-        new_world = { has_discovered = ROOT }
-    }
-}
-
 beua_capital_in_serpentspine = {
     capital_scope = {
         continent = serpentspine
     }
 }
 
-beua_capital_in_forbidden_lands = {
-    capital_scope = {
-        superregion = forbidden_lands_superregion
-    }
-}
-
 beua_capital_in_insyaa = {
     capital_scope = {
         continent = oceania
+    }
+}
+
+beua_capital_in_haless = {
+    capital_scope = {
+        continent = asia
+    }
+}
+
+beua_capital_in_sarhal = {
+    capital_scope = {
+        continent = africa
+    }
+}
+
+beua_capital_in_ruby_mountains = {
+    capital_scope = {
+        OR = {
+            area = east_ruby_mountains_area
+            area = west_ruby_mountains_area
+        }
+    }
+}
+
+beua_capital_in_gerudia_superregion = {
+    capital_scope = { 
+        superregion = gerudia_superregion 
     }
 }
 
@@ -51,6 +64,13 @@ beua_competent_court = {
     }
 }
 
+beua_gene_pillar = {
+    num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 1
+		province_group = gene_pillars
+	}
+}
+
 ########################################################
 ####### Age of Unraveling                        #######
 ########################################################
@@ -60,6 +80,13 @@ beua_audit_government = {
         num_of_loans = 1
     }
     stability = 2
+}
+
+beua_precursor_relics_5 = {
+    num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+		value = 5
+		trade_goods = precursor_relics
+	}
 }
 
 ########################################################

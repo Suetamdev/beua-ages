@@ -9,5 +9,7 @@ dependencies={
 	"Anbennar-PublicFork"
 	"Anbennar-Haless"
 }
-name="BEUA - AGES"
-supported_version="v1.37.5.0"
+picture="thumbnail.png"
+name="BEUA - Ages"
+supported_version="v1.37.*"
+remote_file_id="3779297673"

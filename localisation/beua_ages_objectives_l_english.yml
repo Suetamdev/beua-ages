@@ -5,6 +5,15 @@
  obj_beua_50_development:0 "Develop your Nation"
  obj_beua_50_development_desc:0 "Increase the development of your nation by at least 50."
  
+ obj_beua_150_development:0 "Develop your Nation"
+ obj_beua_150_development_desc:0 "Increase the development of your nation by at least 150."
+
+ obj_beua_pillars:0 "Control a Gene Pillar"
+ obj_beua_pillars_desc:0 "Control at least one of the Great Gene Pillars"
+
+ obj_precursor_relics_5:0 "Control the trade of Relics of the Past"
+ obj_precursor_relics_5_desc:0 "Have at least 5 provinces with Precursor Relics"
+
  obj_beua_competent_court:0 "Competent Court"
  obj_beua_competent_court_desc:0 "Employ an advisor of each type with at least one being level 2 or higher."
 

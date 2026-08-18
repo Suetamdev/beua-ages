@@ -185,6 +185,13 @@ age_of_reformation = {
 		obj_beua_audit_government = {
 			beua_audit_government = yes
 		}
+
+		obj_precursor_relics_5 = {
+			allow = {
+				beua_capital_in_aelantir = yes
+			}
+			beua_precursor_relics_5 = yes
+		}
 	}	
 	
 	
@@ -205,7 +212,7 @@ age_of_reformation = {
 				factor = 0
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_religion_enforced abilityName = ab_allow_religion_enforced flagCategory = state_edict }
+				beua_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_religion_enforced abilityName = ab_allow_religion_enforced }
 			}
 		}
 		ab_siege_blockades = {

@@ -104,7 +104,7 @@ age_of_absolutism = {
 				factor = 10
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_edict_of_absolutism abilityName = ab_allow_edict_of_absolutism flagCategory = state_edict }
+				beua_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_edict_of_absolutism abilityName = ab_allow_edict_of_absolutism }
 			}
 		}
 		ab_core_cost = {

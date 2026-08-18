@@ -4,14 +4,25 @@ spriteTypes = {
 		name = "GFX_obj_beua_large_native_force"
 		texturefile = "gfx/interface/ages/obj_beua_large_native_force.dds"
 	}
-
 	spriteType = {
 		name = "GFX_obj_beua_50_development"
 		texturefile = "gfx/interface/ages/obj_beua_50_development.dds"
 	}
 	spriteType = {
+		name = "GFX_obj_beua_150_development"
+		texturefile = "gfx/interface/ages/obj_beua_150_development.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_beua_pillars"
+		texturefile = "gfx/interface/ages/obj_beua_pillars.dds"
+	}
+	spriteType = {
 		name = "GFX_obj_beua_competent_court"
 		texturefile = "gfx/interface/ages/obj_beua_competent_court.dds"
+	}
+	spriteType = {
+		name = "GFX_obj_precursor_relics_5"
+		texturefile = "gfx/interface/ages/obj_precursor_relics_5.dds"
 	}
 	spriteType = {
 		name = "GFX_obj_dig_holds"

@@ -6,7 +6,6 @@ age_of_discovery = {
 	}
 	
 	religious_conflicts = yes
-	
 
 	objectives = {
 		########################################################
@@ -231,13 +230,32 @@ age_of_discovery = {
 					beua_capital_in_aelantir = yes
 					beua_capital_in_serpentspine = yes
 					beua_capital_in_insyaa = yes
+					beua_capital_in_ruby_mountains = yes
 				}
 			}
 			grown_by_development = 50
 		}
 
+		obj_beua_150_development = {
+			allow = {
+				OR = {
+					beua_capital_in_sarhal = yes
+					beua_capital_in_haless = yes
+					beua_capital_in_gerudia_superregion = yes
+				}
+			}
+			grown_by_development = 150
+		}
+
 		obj_beua_competent_court = {
 			beua_competent_court = yes
+		}
+
+		obj_beua_pillars = {
+			allow = {
+				beua_capital_in_insyaa = yes
+			}
+			beua_gene_pillar = yes
 		}
 	}	
 	
@@ -258,7 +276,7 @@ age_of_discovery = {
 				factor = 10
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_fuedal_de_jure_law abilityName = ab_allow_feudal_de_jure_law flagCategory = state_edict }
+				beua_add_or_upgrade_bonus = { bonusName = edicts flagName = allow_fuedal_de_jure_law abilityName = ab_allow_feudal_de_jure_law }
 			}
 		}
 		ab_justified_wars = {
@@ -281,7 +299,7 @@ age_of_discovery = {
 				}
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = reduce_aggressive_expansion flagCategory = reduce_aggressive_expansion }
+				beua_refund_splendor = { flagName = reduce_aggressive_expansion flagCategory = reduce_aggressive_expansion }
 			}		
 		}
 		ab_transfer_vassal_wargoal = {
@@ -303,7 +321,7 @@ age_of_discovery = {
 				factor = 10
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = transfer_vassal flagCategory = peace_treaty_options }
+				beua_refund_splendor = { flagName = transfer_vassal flagCategory = peace_treaty_options }
 			}
 		}
 		ab_free_war_taxes = {
@@ -318,7 +336,7 @@ age_of_discovery = {
 				factor = 10
 			}	
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = free_war_taxes flagCategory = reduce_war_taxes }
+				beua_refund_splendor = { flagName = free_war_taxes flagCategory = reduce_war_taxes }
 			}
 		}
 		ab_cavalry_armies = {
@@ -333,7 +351,7 @@ age_of_discovery = {
 				factor = 10
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = cav_to_inf_ratio flagCategory = increase_cavalry }
+				beua_refund_splendor = { flagName = cav_to_inf_ratio flagCategory = increase_cavalry }
 			}
 		}
 		ab_colony_boost_development = {
@@ -352,7 +370,7 @@ age_of_discovery = {
 				}
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = colony_boost_development flagCategory = colony_boost_development }
+				beua_refund_splendor = { flagName = colony_boost_development flagCategory = colony_boost_development }
 			}
 		}
 		ab_attack_bonus_in_capital_terrain = {
@@ -371,7 +389,7 @@ age_of_discovery = {
 				}
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = attack_bonus_in_capital_terrain flagCategory = attack_bonus_in_capital_terrain }
+				beua_refund_splendor = { flagName = attack_bonus_in_capital_terrain flagCategory = attack_bonus_in_capital_terrain }
 			}
 		}
 		
@@ -428,7 +446,7 @@ age_of_discovery = {
 				}
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = loyal_vassals flagCategory = loyal_vassals }
+				beua_refund_splendor = { flagName = loyal_vassals flagCategory = loyal_vassals }
 			}
 		}
 		beua_ages_monsters_mercenary_discipline = {
@@ -458,7 +476,7 @@ age_of_discovery = {
 				factor = 10
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = advisor_cost flagCategory = advisor_cost }
+				beua_refund_splendor = { flagName = advisor_cost flagCategory = advisor_cost }
 			}
 		}
 		beua_ages_monsters_changing_world = {
@@ -534,7 +552,7 @@ age_of_discovery = {
 				factor = 10
 			}
 			effect = {
-				beua_add_or_upgrade_bonus = { flagName = interest_and_corruption flagCategory = interest_and_corruption }
+				beua_refund_splendor = { flagName = interest_and_corruption flagCategory = interest_and_corruption }
 			}
 		}
 		beua_ages_monsters_savvy_merchants = {
